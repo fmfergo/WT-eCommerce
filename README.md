@@ -24,3 +24,6 @@ INSERT INTO `products` (`item_id`, `item_name`, `item_desc`, `item_img`, `item_p
 (13, 'Tradescantia Nanouk', 'A popular flowering plant known for its white blooms.', 'tradescantia.jpg', 13.99);
 
 -- --------------------------------------------------------
+
+
+An export of the full database can be found in the file "plant_house.sql"
