@@ -36,7 +36,7 @@ describe('template spec', () => {
 
     // The page acknowleges that an item has been added to the shopping cart
     cy.url().should('include', 'added.php');
-    cy.get('p').contains("has been added to your cart");
+    cy.get('p').should("contain", "has been added to your cart");
   })
 
   it('adds a second item of the same kind to the shopping cart', () => {
@@ -52,7 +52,7 @@ describe('template spec', () => {
     // The page acknowleges that an item has been added to the shopping cart
     cy.url().should('include', 'added.php');
 
-    cy.get('p').contains("Another");
+    cy.get('p').should("contain", "Another");
   })
 
   it('shows the shopping cart after adding one item', () => {
@@ -61,7 +61,7 @@ describe('template spec', () => {
 
     // We go to the shopping cart
     cy.get('a').contains("View Your Cart").click();
-    cy.get('p').contains("£ 12.99");
+    cy.get('p').should("contain", "£ 12.99");
   })
 
   it('shows the shopping cart with the current content', () => {
@@ -75,8 +75,20 @@ describe('template spec', () => {
 
     // We check the shopping cart total
     cy.get('a').contains("View Shopping Cart").click();
-    cy.get('p').contains("£ 23.98");
+    cy.get('p').should("contain", "£ 23.98");
 
+  })
+
+  it('can check out', () => {
+    // An "Add to Cart" button is clicked
+    cy.get('a').eq('4').click();
+
+    // We go to the shopping cart
+    cy.get('a').contains("View Your Cart").click();
+
+    // And check out
+    cy.get('a').contains("Checkout Now").click();
+    cy.get('p').should("contain", "Thanks for your order. Your Order Number Is");
   })
 
 })

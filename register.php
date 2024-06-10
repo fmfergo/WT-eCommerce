@@ -135,5 +135,6 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
             
           
 		<input type="submit" 
-		       value="Create Account Now">
+		       value="Create Account Now"
+           class="btn btn-dark">
 </form><!-- closing form -->
