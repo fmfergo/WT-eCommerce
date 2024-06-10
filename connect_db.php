@@ -1,7 +1,7 @@
 <?php # CONNECT TO MySQL DATABASE.
 
 # Connect/Link  on 'localhost' .
-$link = mysqli_connect('localhost','root','','wd_mktime'); 
+$link = mysqli_connect('localhost','root','','plant_house'); 
   if (!$link) { 
 # Otherwise fail gracefully and explain the error. 
   die('Could not connect to MySQL: ' . mysqli_error()); 

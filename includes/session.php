@@ -11,7 +11,7 @@ if ( !isset( $_SESSION[ 'user_id' ] ) ) { require ( 'login_tools.php' ) ; load()
     <meta charset="utf-8">
     <meta name="viewport" 
    content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>eCommerce Project</title>
+	<title>The Plant House</title>
   <script src="https://kit.fontawesome.com/bb3ef965c3.js" crossorigin="anonymous"></script>
   <style>
     .card {
@@ -46,7 +46,7 @@ aria-expanded="false" aria-label="Toggle navigation">
         <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>View Shopping Cart<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="logout.php">Log Out<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="logout.php" data-cy="logout">Log Out<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
