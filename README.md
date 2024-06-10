@@ -1,6 +1,7 @@
 https://github.com/fmfergo/WT-eCommerce
 
-The name of the database the web sites connects to is "plant_house" on localhost with user root.
+
+"The House Plant" eCommerce connects to the database "plant_house" on localhost with user root.
 
 Please use this sql command to populate the "products" table
 
